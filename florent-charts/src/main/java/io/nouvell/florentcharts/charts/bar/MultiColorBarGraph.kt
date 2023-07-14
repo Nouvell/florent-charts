@@ -1,4 +1,4 @@
-package com.godwinaddy.florent.charts.bar
+package io.nouvell.florentcharts.charts.bar
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.godwinaddy.florent.model.BarGraphGroup
+import io.nouvell.florentcharts.model.BarGraphGroup
 import io.nouvell.florentcharts.charts.bar.BarGraphContent
 
 @Composable

@@ -1,4 +1,4 @@
-package com.godwinaddy.florent.model
+package io.nouvell.florentcharts.model
 
 import androidx.compose.ui.graphics.Color
 

@@ -11,19 +11,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.godwinaddy.florent.charts.bar.MultiColoredBarGraph
-import com.godwinaddy.florent.charts.bar.UniColorBarGraph
-import com.godwinaddy.florent.model.BarGraphDataPoint
-import com.godwinaddy.florent.model.BarGraphGroup
-import com.godwinaddy.florent.model.BarGraphSectionDataPoint
+import io.nouvell.florentcharts.charts.bar.MultiColoredBarGraph
+import io.nouvell.florentcharts.charts.bar.UniColorBarGraph
+import io.nouvell.florentcharts.model.BarGraphDataPoint
+import io.nouvell.florentcharts.model.BarGraphGroup
+import io.nouvell.florentcharts.model.BarGraphSectionDataPoint
 import io.nouvell.florentcharts.ui.theme.FlorentChartsTheme
 
 class MainActivity : ComponentActivity() {
