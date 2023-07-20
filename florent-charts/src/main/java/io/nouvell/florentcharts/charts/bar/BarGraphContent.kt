@@ -27,13 +27,13 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import io.nouvell.florentcharts.model.BarGraphGroup
+import io.nouvell.florentcharts.model.Section
 import io.nouvell.florentcharts.util.drawRoundedTopRect
 import kotlin.math.ceil
 
 @Composable
 fun BarGraphContent(
-    dataPoints: List<BarGraphGroup>,
+    dataPoints: List<Section>,
     barThickness: Dp,
     graphLineColor: Color,
     labelTextColor: Color,
@@ -256,7 +256,7 @@ fun BarGraphContent(
                                     (xPos * barSlotWidth) - ((barSlotWidth - barThicknessPx) / 2)
                                 val totalRectOffsetY =
                                     (this.size.height - totalRectHeight).toFloat()
-                                val groupSections = group.sections
+                                val groupSections = group.subSections
                                 val prevHeights = mutableListOf<Double>()
 
                                 groupSections.forEachIndexed { index, point ->

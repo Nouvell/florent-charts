@@ -15,11 +15,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import io.nouvell.florentcharts.charts.bar.MultiColoredBarGraph
-import io.nouvell.florentcharts.charts.bar.UniColorBarGraph
-import io.nouvell.florentcharts.model.BarGraphDataPoint
-import io.nouvell.florentcharts.model.BarGraphGroup
-import io.nouvell.florentcharts.model.BarGraphSectionDataPoint
+import io.nouvell.florentcharts.charts.bar.BarGraph
+import io.nouvell.florentcharts.charts.bar.SubDividedBarGraph
+import io.nouvell.florentcharts.model.Section
+import io.nouvell.florentcharts.model.SubSection
 import io.nouvell.florentcharts.ui.theme.FlorentChartsTheme
 
 class MainActivity : ComponentActivity() {
@@ -32,11 +31,11 @@ class MainActivity : ComponentActivity() {
                         .fillMaxSize()
                         .verticalScroll(rememberScrollState())
                 ) {
-                    UniColorGraphDemo()
+                    BarGraphDemo()
 
                     Spacer(Modifier.height(20.dp))
 
-                    MultiColoredGraphDemo()
+                    SubDividedBarGraphDemo()
                 }
             }
         }
@@ -44,37 +43,16 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-private fun UniColorGraphDemo() {
-    UniColorBarGraph(
-        dataPoints = listOf(
-            BarGraphDataPoint(
-                label = "S",
-                value = 20_230.00,
-            ),
-            BarGraphDataPoint(
-                label = "M",
-                value = 6_530.00,
-            ),
-            BarGraphDataPoint(
-                label = "T",
-                value = 10_000.00,
-            ),
-            BarGraphDataPoint(
-                label = "W",
-                value = 2_230.00,
-            ),
-            BarGraphDataPoint(
-                label = "T",
-                value = 10_000.00,
-            ),
-            BarGraphDataPoint(
-                label = "F",
-                value = 14_000.00,
-            ),
-            BarGraphDataPoint(
-                label = "S",
-                value = 3_000.00,
-            ),
+private fun BarGraphDemo() {
+    BarGraph(
+        sections = listOf(
+            Section(label = "S", value = 20_230.00),
+            Section(label = "M", value = 6_530.00),
+            Section(label = "T", value = 10_000.00),
+            Section(label = "W", value = 2_230.00),
+            Section(label = "T", value = 10_000.00),
+            Section(label = "F", value = 14_000.00),
+            Section(label = "S", value = 3_000.00),
         ),
         modifier = Modifier
             .background(Color.White)
@@ -84,39 +62,39 @@ private fun UniColorGraphDemo() {
 }
 
 @Composable
-private fun MultiColoredGraphDemo() {
-    MultiColoredBarGraph(
-        dataPoints = listOf(
-            BarGraphGroup(
-                label = "S",
-                sections = listOf(
-                    BarGraphSectionDataPoint(234_343.0, Color(0xFF019F8E)),
-                    BarGraphSectionDataPoint(60_500.0, Color(0xFFFF2D55)),
-                    BarGraphSectionDataPoint(380_000.0, Color(0xFFFF5777)),
-                    BarGraphSectionDataPoint(100.0, Color(0xFF995A00)),
-                    BarGraphSectionDataPoint(54_300.0, Color(0xFF3395FF)),
-                    BarGraphSectionDataPoint(100_234.0, Color(0xFF7978DE)),
-                    BarGraphSectionDataPoint(93_222.0, Color(0xFF3DAE50)),
+private fun SubDividedBarGraphDemo() {
+    SubDividedBarGraph(
+        sections = listOf(
+            Section(
+                label = "M",
+                subSections = listOf(
+                    SubSection(234_343.0, Color(0xFF019F8E)),
+                    SubSection(60_500.0, Color(0xFFFF2D55)),
+                    SubSection(380_000.0, Color(0xFFFF5777)),
+                    SubSection(100.0, Color(0xFF995A00)),
+                    SubSection(54_300.0, Color(0xFF3395FF)),
+                    SubSection(100_234.0, Color(0xFF7978DE)),
+                    SubSection(93_222.0, Color(0xFF3DAE50)),
                 ),
             ),
-            BarGraphGroup(
+            Section(
                 label = "T",
-                sections = listOf(
-                    BarGraphSectionDataPoint(234_343.0, Color(0xFFFFAA33)),
-                    BarGraphSectionDataPoint(60_500.0, Color(0xFFFCC003)),
-                    BarGraphSectionDataPoint(380_000.0, Color(0xFF9CABB8)),
-                    BarGraphSectionDataPoint(100.0, Color(0xFF7978DE)),
-                    BarGraphSectionDataPoint(380_000.0, Color(0xFFFF5777)),
-                    BarGraphSectionDataPoint(100.0, Color(0xFF995A00)),
-                    BarGraphSectionDataPoint(54_300.0, Color(0xFF3395FF)),
+                subSections = listOf(
+                    SubSection(234_343.0, Color(0xFFFFAA33)),
+                    SubSection(60_500.0, Color(0xFFFCC003)),
+                    SubSection(380_000.0, Color(0xFF9CABB8)),
+                    SubSection(100.0, Color(0xFF7978DE)),
+                    SubSection(380_000.0, Color(0xFFFF5777)),
+                    SubSection(100.0, Color(0xFF995A00)),
+                    SubSection(54_300.0, Color(0xFF3395FF)),
                 ),
             ),
-            BarGraphGroup(
+            Section(
                 label = "W",
-                sections = listOf(
-                    BarGraphSectionDataPoint(380_000.0, Color(0xFFFF5777)),
-                    BarGraphSectionDataPoint(80_000.0, Color(0xFF9CABB8)),
-                    BarGraphSectionDataPoint(100.0, Color(0xFF7978DE)),
+                subSections = listOf(
+                    SubSection(380_000.0, Color(0xFFFF5777)),
+                    SubSection(80_000.0, Color(0xFF9CABB8)),
+                    SubSection(100.0, Color(0xFF7978DE)),
                 ),
             ),
         ),
