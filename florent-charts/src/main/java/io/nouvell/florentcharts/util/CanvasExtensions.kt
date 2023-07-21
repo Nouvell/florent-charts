@@ -1,4 +1,4 @@
-package com.godwinaddy.florent.util
+package io.nouvell.florentcharts.util
 
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
