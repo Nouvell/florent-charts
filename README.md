@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'io.github.nouvell:florent-charts:0.0.1'
+  implementation 'io.github.nouvell:florent-charts:1.0.0'
 }
 ```
 
