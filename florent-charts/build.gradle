@@ -43,7 +43,7 @@ mavenPublishing {
     publishToMavenCentral(SonatypeHost.S01, true)
     signAllPublications()
 
-    coordinates("io.github.nouvell", "florent-charts", "1.0.0-SNAPSHOTS")
+    coordinates("io.github.nouvell", "florent-charts", "1.0.0")
 
     pom {
         name = "Florent-Charts"
