@@ -1,5 +1,6 @@
 # Florent-Charts
 
+<img src="https://raw.githubusercontent.com/Nouvell/Florent-Charts/main/resources/florent_charts_ss.png/>
 Florent-Charts is a light,flexible and customizable graphing library built with Jetpack Compose.
 
 ### Available Chart APIs
