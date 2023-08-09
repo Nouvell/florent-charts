@@ -1,6 +1,7 @@
 # Florent-Charts
 
 Florent-Charts is a light,flexible and customizable graphing library built with Jetpack Compose.
+![image](resources/florent_charts_ss.png)
 
 ### Available Chart APIs
 - Vertical Bar Graph
